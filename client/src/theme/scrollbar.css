@@ -1,0 +1,43 @@
+/* General Scrollbar style */
+::-webkit-scrollbar {
+  /*vertical scroll bar*/
+  width: 8px;
+  /*horizontal scroll bar*/
+  height: 0px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track,
+.scrollHover:hover::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  transition: background-color 2s, border 2s;
+  /*animation: toggleDisplayScrollScrollbarTrack 5s reverse;*/
+}
+
+::-webkit-scrollbar-thumb,
+.scrollHover:hover::-webkit-scrollbar-thumb {
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+  border: 1px solid var(--bg-secondary);
+  transition: background-color 2s, border 2s;
+  /*animation: toggleDisplayScrollScrollbarThumb 5s reverse;*/
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Want to hide when some elements are not hover */
+.scrollHover::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color 5s, border 5s;
+}
+
+.scrollHover::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color 5s, border 6s;
+}

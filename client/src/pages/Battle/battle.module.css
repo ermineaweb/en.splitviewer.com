@@ -1,0 +1,130 @@
+.root {
+  display: grid;
+  grid-template-columns: auto 720px;
+  grid-template-rows: 40px 1fr 40px 40px 1fr;
+  grid-template-areas:
+    " filters filters"
+    " group1 streamers"
+    " result1 streamers"
+    " result2 streamers"
+    " group2 streamers";
+}
+
+.root > div {
+  transition: box-shadow 0.2s ease;
+}
+
+.streamers {
+  grid-area: streamers;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  overflow-x: scroll;
+  height: 73vh;
+  margin: 0 2vw;
+}
+
+.filters {
+  grid-area: filters;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filters > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+  max-width: 120px;
+  margin: 0 2vw;
+}
+
+.group2,
+.group1 {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  overflow-x: scroll;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 10px;
+}
+
+.result1,
+.result2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
+
+.result {
+  grid-area: result;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group1 {
+  grid-area: group1;
+}
+
+.group2 {
+  grid-area: group2;
+}
+
+.result1 {
+  grid-area: result1;
+}
+
+.result2 {
+  grid-area: result2;
+}
+
+.streamer {
+  width: 75px;
+  height: 75px;
+  margin: 12px 3px;
+  border-radius: 4px;
+}
+
+.username {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dragging {
+  box-shadow: 0 0 12px 0px grey;
+}
+
+.winner {
+  outline: 2px solid #cb4081;
+}
+
+@media screen and (max-width: 800px) {
+  .root {
+    grid-template-columns: auto 100px;
+    grid-template-rows: 40px 1fr 40px 40px 1fr;
+    grid-template-areas:
+      " filters filters"
+      " group1 streamers"
+      " result1 streamers"
+      " result2 streamers"
+      " group2 streamers";
+  }
+
+  .streamer {
+    width: 80px;
+    height: 40px;
+  }
+}

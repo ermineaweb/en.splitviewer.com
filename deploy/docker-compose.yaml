@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  en_splitviewer_server:
+    build:
+      context: ../
+      dockerfile: ./deploy/Dockerfile-server
+    ports:
+      - 80
+    networks:
+      - default
+      - webproxy
+    volumes:
+      - ../images:/app/server/img
+    env_file:
+      - ../.env
+    environment:
+      - VIRTUAL_HOST=en.api.splitviewer.com
+      - LETSENCRYPT_HOST=en.api.splitviewer.com
+      - LETSENCRYPT_EMAIL=ermineaweb@gmail.com
+
+  en_splitviewer_client:
+    build:
+      context: ../
+      dockerfile: ./deploy/Dockerfile-client
+    networks:
+      - default
+      - webproxy
+    ports:
+      - 80
+    env_file:
+      - ../.env
+    environment:
+      - VIRTUAL_HOST=en.splitviewer.com
+      - LETSENCRYPT_HOST=en.splitviewer.com
+      - LETSENCRYPT_EMAIL=ermineaweb@gmail.com
+
+  en_splitviewer_db:
+    image: mongo
+    restart: always
+    networks:
+      - default
+    command: --quiet --logpath /dev/null
+    volumes:
+      - ../db:/data/db
+
+networks:
+  webproxy:
+    external:
+      name: webproxy
+  
+  default:

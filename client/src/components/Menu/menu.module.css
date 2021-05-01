@@ -1,0 +1,38 @@
+.root {
+  width: 100vw;
+  height: 45px;
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  margin: 0 0 0 10px;
+}
+
+.nav {
+  display: flex;
+  background-color: var(--bg-secondary);
+  align-items: center;
+}
+
+.nav h4 {
+  font-size: 1.1em;
+  color: var(--text-secondary);
+  align-items: center;
+  margin: 0 3vw;
+}
+
+.nav h4:hover {
+  color: var(--text-secondaryhover);
+}
+
+@media screen and (max-width: 600px) {
+  .nav h4 {
+    font-size: 0.9em;
+    margin: 0 5px;
+  }
+}

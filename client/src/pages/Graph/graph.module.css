@@ -1,0 +1,51 @@
+.root {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 80px auto;
+  grid-template-areas:
+    "period link"
+    "graph graph";
+}
+
+.root > * {
+  margin: 10px;
+}
+
+.filters {
+  grid-area: filters;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.period {
+  grid-area: period;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.link {
+  grid-area: link;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.graph {
+  grid-area: graph;
+  border: 1px solid grey;
+  height: calc(90vh - 90px);
+}
+
+@media screen and (max-width: 725px) {
+  .root {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px 80px auto;
+    grid-template-areas:
+      "period"
+      "link"
+      "graph";
+  }
+}

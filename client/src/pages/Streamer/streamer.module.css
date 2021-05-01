@@ -1,0 +1,81 @@
+.root {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto 550px auto auto;
+  grid-template-areas:
+    "information stats"
+    "streamers stats"
+    "graph graph"
+    "clipsTop clipsTop"
+    "clipsRandom clipsRandom";
+}
+
+.root > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  margin: 8px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+.root > div > h2 {
+  text-align: center;
+}
+
+.information {
+  grid-area: information;
+  /*height: 180px;*/
+}
+
+.stats {
+  grid-area: stats;
+}
+
+.streamers {
+  grid-area: streamers;
+}
+
+.streamers > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.graph {
+  grid-area: graph;
+}
+
+.graph > div {
+  /*height: 300px;*/
+  border: 1px solid #bababa;
+}
+
+.clipsTop {
+  grid-area: clipsTop;
+}
+
+.clipsRandom {
+  grid-area: clipsRandom;
+}
+
+@media screen and (max-width: 1200px) {
+  .root {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto 400px auto auto;
+    grid-template-areas:
+      "information"
+      "streamers"
+      "stats"
+      "graph"
+      "clipsTop"
+      "clipsRandom";
+  }
+  .root > div {
+    margin: 1vh 0;
+  }
+}

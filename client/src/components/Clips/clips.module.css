@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.clip {
+  width: 300px;
+  height: 195px;
+  margin: 0 5px 10px 5px;
+}
+
+.title {
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.thumbnail {
+  width: 100%;
+  transition: 180ms transform;
+  border: 5px solid rgba(255, 255, 255, 0);
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 4px grey;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}

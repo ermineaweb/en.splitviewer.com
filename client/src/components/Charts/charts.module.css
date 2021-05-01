@@ -1,0 +1,67 @@
+.root {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "indicators indicators"
+    "charts charts";
+  grid-gap: 10px 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.root > div {
+  /*background-color: #cd4c4c;*/
+}
+.title {
+  grid-area: title;
+}
+
+.indicators {
+  grid-area: indicators;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.charts {
+  grid-area: charts;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart {
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  text-align: center;
+  margin: 1%;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.progress > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweetbtn {
+  width: 110px;
+  height: 32px;
+  border-radius: 3px;
+  background-color: #1b95e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  color: white;
+  font-weight: 800;
+}

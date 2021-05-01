@@ -1,0 +1,58 @@
+.root {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 80px auto;
+  grid-template-areas:
+    "filters filters"
+    "streamers streamers";
+}
+
+.infos {
+  grid-area: infos;
+  place-self: center center;
+}
+
+.filters {
+  grid-area: filters;
+  place-self: center end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.filters > * {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.filters > div {
+  width: 130px;
+}
+
+.streamers {
+  grid-area: streamers;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 725px) {
+  .root {
+    grid-template-columns: auto;
+    grid-template-rows: 120px auto;
+    grid-template-areas:
+      "filters"
+      "streamers";
+  }
+
+  .filters {
+    place-self: start center;
+    flex-flow: column wrap;
+  }
+}

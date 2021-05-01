@@ -1,0 +1,11 @@
+FROM node:14-slim
+WORKDIR /app
+COPY ./server/package*.json ./
+RUN npm install --silent --production
+COPY ./server/ ./
+
+HEALTHCHECK --interval=10s --timeout=3s --start-period=3s CMD timeout 3 bash -c 'cat < /dev/null > /dev/tcp/localhost/5000'
+
+EXPOSE 5000
+
+CMD ["node", "src/index.js"]

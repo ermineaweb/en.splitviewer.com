@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.stats > h4 {
+  font-size: 1.8em;
+  color: var(--text-secondaryhover);
+}
+
+.stats > h3 {
+  font-size: 1.1em;
+}

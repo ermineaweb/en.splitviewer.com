@@ -1,0 +1,59 @@
+{
+  "name": "reactclient",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "fontsource-montserrat": "^4.0.0",
+    "fontsource-open-sans": "^4.0.0",
+    "react": "^17.0.1",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^17.0.1",
+    "react-graph-vis": "^1.0.5",
+    "react-icons": "^4.1.0",
+    "react-reveal": "^1.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "recharts": "^1.8.5",
+    "workbox": "0.0.0",
+    "workbox-background-sync": "^6.0.2",
+    "workbox-broadcast-update": "^6.0.2",
+    "workbox-cacheable-response": "^6.0.2",
+    "workbox-core": "^6.0.2",
+    "workbox-expiration": "^6.0.2",
+    "workbox-google-analytics": "^6.0.2",
+    "workbox-navigation-preload": "^6.0.2",
+    "workbox-precaching": "^6.0.2",
+    "workbox-range-requests": "^6.0.2",
+    "workbox-routing": "^6.0.2",
+    "workbox-streams": "^6.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "workbox-strategies": "^6.0.2"
+  }
+}
