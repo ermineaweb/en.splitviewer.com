@@ -4,7 +4,7 @@ const { downloadFile } = require("../utils");
 
 const numberStreamerRefresh = Number(process.env.NUMBER_STREAMERS_REFRESH) || 3;
 const viewersLimit = Number(process.env.VIEWERS_MINI_TO_REFRESH) || 5000;
-const languageStreamerRefresh = Number(process.env.LANGUAGE_STREAMERS_REFRESH) || "fr";
+const languageStreamerRefresh = Number(process.env.LANGUAGE_STREAMERS_REFRESH) || "en";
 
 class StreamerService extends ServiceManager {
   constructor() {
