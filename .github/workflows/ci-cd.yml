@@ -18,7 +18,7 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
         with:
           source: "."
-          target: "/home/romain/workspace/fr.splitviewer.com"
+          target: "/home/romain/workspace/en.splitviewer.com"
 
   running:
     needs: deploy
@@ -31,4 +31,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: "cd workspace/fr.splitviewer.com && sudo chmod +x run.sh && ./run.sh"
+          script: "cd workspace/en.splitviewer.com && sudo chmod +x run.sh && ./run.sh"
