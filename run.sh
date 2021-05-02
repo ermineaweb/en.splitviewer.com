@@ -7,6 +7,7 @@ fi
 
 if [ ! -d "db" ]; then
     mkdir "db"
+    sudo chown romain:romain db -R
 fi
 
 if [ ! -d "images" ]; then
