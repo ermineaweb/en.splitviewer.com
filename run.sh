@@ -7,11 +7,12 @@ fi
 
 if [ ! -d "db" ]; then
     mkdir "db"
-    sudo chown -R 1000:1000 db
 fi
 
 if [ ! -d "images" ]; then
     mkdir "images"
 fi
+
+sudo chown -R 1000:1000 db
 
 cd deploy && sudo docker-compose up --build -d
