@@ -13,7 +13,6 @@ if [ ! -d "images" ]; then
     mkdir "images"
 fi
 
-sudo chown -R romain:romain db
-sudo chown -R romain:romain images
+sudo chown -R 1000:1000 db
 
 cd deploy && docker-compose up --build -d
