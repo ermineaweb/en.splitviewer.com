@@ -15,4 +15,4 @@ fi
 
 sudo chown -R 1000:1000 db
 
-cd deploy && docker-compose up --build -d
+cd deploy && sudo docker-compose up --build -d
