@@ -12,7 +12,7 @@ services:
       - default
       - webproxy
     volumes:
-      - ../images:/app/img
+      - ../images:/app/server/img
     env_file:
       - ../.env
     environment:
