@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+  
   en_splitviewer_server:
     build:
       context: ../
@@ -18,6 +19,8 @@ services:
       - VIRTUAL_HOST=en.api.splitviewer.com
       - LETSENCRYPT_HOST=en.api.splitviewer.com
       - LETSENCRYPT_EMAIL=ermineaweb@gmail.com
+    depends_on:
+      - en_splitviewer_server
 
   en_splitviewer_client:
     build:
@@ -34,6 +37,8 @@ services:
       - VIRTUAL_HOST=en.splitviewer.com
       - LETSENCRYPT_HOST=en.splitviewer.com
       - LETSENCRYPT_EMAIL=ermineaweb@gmail.com
+    depends_on:
+      - en_splitviewer_server
 
   en_splitviewer_db:
     image: mongo
