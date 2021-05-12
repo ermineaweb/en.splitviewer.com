@@ -38,6 +38,7 @@ services:
   en_splitviewer_db:
     image: mongo
     restart: always
+    user: 2000:2000
     networks:
       - default
     command: --quiet --logpath /dev/null
