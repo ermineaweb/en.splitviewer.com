@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  
+
   en_splitviewer_server:
     build:
       context: ../
@@ -20,7 +20,7 @@ services:
       - LETSENCRYPT_HOST=en.api.splitviewer.com
       - LETSENCRYPT_EMAIL=ermineaweb@gmail.com
     depends_on:
-      - en_splitviewer_server
+      - en_splitviewer_db
 
   en_splitviewer_client:
     build:
