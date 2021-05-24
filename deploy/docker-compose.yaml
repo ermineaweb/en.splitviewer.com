@@ -48,8 +48,11 @@ services:
       - default
     command: --quiet --logpath /dev/null
     volumes:
-      - ../db:/data/db
+      - db:/data/db
 
+volumes:
+  db:
+    
 networks:
   webproxy:
     external:

@@ -14,4 +14,4 @@ if [ ! -d "images" ]; then
     mkdir "images"
 fi
 
-cd deploy && sudo docker-compose up --build -d
+cd deploy && docker-compose up --build -d
