@@ -5,13 +5,13 @@ if [ ! -f ".env" ]; then
     exit 255
 fi
 
-# if [ ! -d "db" ]; then
-#     mkdir "db"
-#     sudo chown -R 2000:2000 db
-# fi
+if [ ! -d "db" ]; then
+    mkdir "db"
+fi
 
 if [ ! -d "images" ]; then
     mkdir "images"
 fi
 
+sudo chown -R 1000:1000 db
 cd deploy && docker-compose up --build -d
