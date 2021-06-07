@@ -13,5 +13,5 @@ if [ ! -d "images" ]; then
     mkdir "images"
 fi
 
-sudo chown -R 1000:1000 db
+sudo chown 1000:1000 db -R
 cd deploy && docker-compose up --build -d
