@@ -46,7 +46,6 @@ services:
     networks:
       - default
     command: --quiet --logpath /dev/null
-    user: 1000:1000
     volumes:
       - ../db:/data/db
 
